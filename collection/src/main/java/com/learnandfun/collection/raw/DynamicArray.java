@@ -1,4 +1,4 @@
-package com.learnandfun.collection;
+package com.learnandfun.collection.raw;
 
 public class DynamicArray<String> {
 	private Object[] data;
