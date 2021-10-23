@@ -19,6 +19,7 @@ public class App
 		for (int i = 0; i <= dynamic.getSize(); i++) {
 			System.out.print(dynamic.get(i));
 		}
+		testListImpl();
     }
 
 	public static void mySimpleArray() {
@@ -27,5 +28,10 @@ public class App
 			System.out.print(value);
 		}
 
+	}
+
+	public static void testListImpl() {
+		ListImpl impl = new ListImpl();
+		impl.demoArrayList();
 	}
 }

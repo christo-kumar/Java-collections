@@ -3,8 +3,9 @@ package com.learnandfun.collection.raw;
 public class LinkedList {
 
 	private Node head;
+	private int size = 0;
 
-	private static class Node {
+	public static class Node {
 		int data;
 		Node next;
 
@@ -12,12 +13,33 @@ public class LinkedList {
 			this.data = data;
 			next = null;
 		}
+
+		@SuppressWarnings("unused")
+		public int getValue() {
+			return data;
+		}
 	}
 
 	public void addFront(int number) {
 		Node newNode = new Node(number);
 		newNode.next = head;
 		head = newNode;
+		size++;
+	}
+
+	public void addLast(int number) {
+		Node lastNode = getLast();
+		Node newNode = new Node(number);
+		lastNode.next = newNode;
+		size++;
+	}
+
+	public void remove() {
+
+	}
+
+	public int size() {
+		if ()
 	}
 
 	public Node trav(Node node) {
