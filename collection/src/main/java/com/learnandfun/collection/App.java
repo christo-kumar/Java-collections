@@ -10,6 +10,9 @@ public class App
 {
     public static void main( String[] args )
     {
+
+		int[] y = new int[5];
+
         System.out.println( "Hello World!" );
 		mySimpleArray();
 		DynamicArray dynamic = new DynamicArray(10);
@@ -20,6 +23,8 @@ public class App
 			System.out.print(dynamic.get(i));
 		}
 		testListImpl();
+
+
     }
 
 	public static void mySimpleArray() {
