@@ -5,9 +5,9 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ListImpl {
-
-	public void demoArrayList() {
+public class JavaList
+{
+	public void arrayList() {
 		List<String> names = new ArrayList<>();
 		names.add("Christo");
 		names.add("Abhinav");
@@ -18,7 +18,7 @@ public class ListImpl {
 		}
 	}
 
-	public void demoLinkedList() {
+	public void linkedList() {
 		List<String> names = new LinkedList<>();
 		names.add("Christo");
 		for (String name : names) {
