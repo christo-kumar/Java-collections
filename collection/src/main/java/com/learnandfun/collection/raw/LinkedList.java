@@ -16,7 +16,7 @@ public class LinkedList {
 		}
 	}
 
-	public void addFront(int number) {
+	public void addonHead(int number) {
 		Node newNode = new Node(number);
 		newNode.next = head;
 		head = newNode;
