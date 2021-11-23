@@ -37,9 +37,9 @@ public class LinkedListTest extends TestCase {
 	}
 
 	public void testAddLast() {
-		linkedList.addFront(1);
-		linkedList.add(5);
-		linkedList.add(6);
+		// linkedList.addFront(1);
+		// linkedList.add(5);
+		// linkedList.add(6);
 		// assertEquals(linkedList.getLast().getValue(), 6);
 
 	}

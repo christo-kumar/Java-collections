@@ -5,6 +5,22 @@ public class Stack {
 	private Node top;
 	private int size = 0;
 
+	public Node getTop() {
+		return top;
+	}
+
+	public void setTop(Node top) {
+		this.top = top;
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+
 	public Stack() {
 		top = null;
 		size = 0;

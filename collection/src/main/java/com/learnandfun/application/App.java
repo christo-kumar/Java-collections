@@ -13,7 +13,7 @@ public class App
     {
 		simpleArray();
 		dynamicArray();
-		linkedList();
+		javaCollection();
 	}
 
 	public static void simpleArray() {
@@ -34,7 +34,7 @@ public class App
 
     }
 
-	public static void linkedList() {
+	public static void javaCollection() {
 		JavaList collection = new JavaList();
 		collection.arrayList();
 	}
