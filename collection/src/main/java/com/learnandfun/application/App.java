@@ -2,6 +2,7 @@ package com.learnandfun.application;
 
 import com.learnandfun.collection.JavaList;
 import com.learnandfun.collection.raw.DynamicArray;
+import com.learnandfun.collection.raw.HashTable;
 
 /**
  * Hello world!
@@ -14,6 +15,7 @@ public class App
 		simpleArray();
 		dynamicArray();
 		javaCollection();
+		javaHashTable();
 	}
 
 	public static void simpleArray() {
@@ -37,5 +39,12 @@ public class App
 	public static void javaCollection() {
 		JavaList collection = new JavaList();
 		collection.arrayList();
+	}
+
+	public static void javaHashTable() {
+		HashTable hashTable = new HashTable();
+		hashTable.add("name", "christo");
+		String value = hashTable.value("name");
+		System.out.print(value);
 	}
 }
