@@ -1,6 +1,7 @@
 package com.learnandfun.application;
 
 import com.learnandfun.collection.JavaList;
+import com.learnandfun.collection.raw.BinaryTree;
 import com.learnandfun.collection.raw.DynamicArray;
 import com.learnandfun.collection.raw.HashTable;
 
@@ -12,10 +13,11 @@ public class App
 {
     public static void main( String[] args )
     {
-		simpleArray();
-		dynamicArray();
-		javaCollection();
-		javaHashTable();
+		// simpleArray();
+		// dynamicArray();
+		// javaCollection();
+		// javaHashTable();
+		javaBinaryTree();
 	}
 
 	public static void simpleArray() {
@@ -47,4 +49,19 @@ public class App
 		String value = hashTable.value("name");
 		System.out.print(value);
 	}
+
+	public static void javaBinaryTree() {
+		BinaryTree tree = new BinaryTree();
+		try {
+			tree.insert(5);
+			tree.insert(4);
+			tree.insert(6);
+			tree.insert(2);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
 }
