@@ -1,5 +1,13 @@
 package com.learnandfun.collection.raw;
 
+//Sequence of operation
+//Add Front
+//Get First, Get Last
+//Add Back
+//Size
+//Clear
+//Delete with value
+
 public class LinkedList {
 
 	private Node head = null;

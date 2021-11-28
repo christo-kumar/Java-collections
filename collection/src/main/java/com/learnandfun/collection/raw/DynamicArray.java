@@ -1,5 +1,17 @@
 package com.learnandfun.collection.raw;
 
+/***
+ * 
+ * @author christokumar
+ *
+ * @param <String>
+ * 
+ *                 Setup the DS with array, size and initial capacity Set
+ *                 Operation Get Operation Insert Operation, Resize operation
+ *                 Delete
+ * 
+ */
+
 public class DynamicArray<String> {
 	private Object[] data;
 	private int size;
