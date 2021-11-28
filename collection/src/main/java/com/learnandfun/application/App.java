@@ -1,6 +1,7 @@
 package com.learnandfun.application;
 
 import com.learnandfun.collection.JavaList;
+import com.learnandfun.collection.raw.BinaryHeap;
 import com.learnandfun.collection.raw.BinaryTree;
 import com.learnandfun.collection.raw.DynamicArray;
 import com.learnandfun.collection.raw.HashTable;
@@ -17,7 +18,8 @@ public class App
 		// dynamicArray();
 		// javaCollection();
 		// javaHashTable();
-		javaBinaryTree();
+		// javaBinaryTree();
+		javaBinaryHeap();
 	}
 
 	public static void simpleArray() {
@@ -58,9 +60,29 @@ public class App
 			tree.insert(6);
 			tree.insert(2);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
+	}
+
+	public static void javaBinaryHeap() {
+		BinaryHeap binHeap = new BinaryHeap();
+		binHeap.insert(10);
+		binHeap.insert(11);
+		int max = binHeap.getMax();
+		System.out.print(max);
+		binHeap.insert(12);
+		max = binHeap.getMax();
+		System.out.print(max);
+		binHeap.insert(13);
+		max = binHeap.getMax();
+		System.out.print(max);
+		binHeap.insert(9);
+		max = binHeap.getMax();
+		System.out.print(max);
+		binHeap.insert(15);
+		max = binHeap.getMax();
+		System.out.print(max);
 
 	}
 
