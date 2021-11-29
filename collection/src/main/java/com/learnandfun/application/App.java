@@ -4,6 +4,7 @@ import com.learnandfun.collection.JavaList;
 import com.learnandfun.collection.raw.BinaryHeap;
 import com.learnandfun.collection.raw.BinaryTree;
 import com.learnandfun.collection.raw.DynamicArray;
+import com.learnandfun.collection.raw.Graph;
 import com.learnandfun.collection.raw.HashTable;
 
 /**
@@ -19,7 +20,19 @@ public class App
 		// javaCollection();
 		// javaHashTable();
 		// javaBinaryTree();
-		javaBinaryHeap();
+		// javaBinaryHeap();
+		javaGraph();
+	}
+
+	private static void javaGraph() {
+		Graph graph = new Graph(4);
+		graph.addEdge(0, 0);
+		graph.addEdge(0, 1);
+		graph.addEdge(0, 2);
+		graph.addEdge(2, 3);
+		graph.BFS();
+
+
 	}
 
 	public static void simpleArray() {
