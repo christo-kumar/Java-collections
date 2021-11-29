@@ -31,6 +31,7 @@ public class App
 		graph.addEdge(0, 2);
 		graph.addEdge(2, 3);
 		graph.BFS();
+		graph.DFS();
 
 
 	}
