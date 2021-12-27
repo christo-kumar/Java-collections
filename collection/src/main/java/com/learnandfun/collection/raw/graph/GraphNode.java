@@ -1,4 +1,4 @@
-package com.learnandfun.collection.raw;
+package com.learnandfun.collection.raw.graph;
 
 public class GraphNode {
 	public Integer value;
