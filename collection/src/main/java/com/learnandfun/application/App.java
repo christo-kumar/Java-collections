@@ -3,10 +3,10 @@ package com.learnandfun.application;
 import com.learnandfun.algorithm.Algorithm;
 import com.learnandfun.collection.JavaList;
 import com.learnandfun.collection.raw.BinaryHeap;
-import com.learnandfun.collection.raw.BinaryTree;
 import com.learnandfun.collection.raw.DynamicArray;
 import com.learnandfun.collection.raw.Graph;
 import com.learnandfun.collection.raw.HashTable;
+import com.learnandfun.collection.raw.tree.BinaryTree;
 
 /**
  * Hello world!

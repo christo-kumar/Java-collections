@@ -1,4 +1,4 @@
-package com.learnandfun.collection.raw;
+package com.learnandfun.collection.raw.tree;
 
 /***
  * 
