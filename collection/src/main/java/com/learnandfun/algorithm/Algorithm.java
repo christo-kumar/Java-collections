@@ -140,10 +140,7 @@ public class Algorithm {
 		// string to contain another.
 	}
 	
-	public void pathWithSum() {
-		//To do
-	}
-	
+
 	public String revStr(String thisStr) {
 		char[] charArray = thisStr.toCharArray();
 		int arrSize = charArray.length - 1;
@@ -177,10 +174,6 @@ public class Algorithm {
 		}
 	}
 
-	public void ransomeNote() {
-		// Todo
-	}
-
 	public String cipherDemo(String thisStr) {
 		char[] chrArray = thisStr.toCharArray();
 		for (int index = 0; index < chrArray.length; index++) {
@@ -195,11 +188,6 @@ public class Algorithm {
 		return new String(chrArray);
 	}
 
-	public int[] sieveOfEratosthenes(int index) {
-		// Keep on removing multiples of numbers
-		return null;
-	}
-
 	public Integer reverseInt(int number) {
 		String thisStr = String.valueOf(number);
 		String revStr = revStr(thisStr);
@@ -207,6 +195,16 @@ public class Algorithm {
 	}
 
 	public Boolean isAnagram(String thisStr, String thatStr) {
+		// sort both strings
+		char[] thisArr = thisStr.toCharArray();
+		char[] thatArr = thatStr.toCharArray();
+		Arrays.sort(thisArr);
+		Arrays.sort(thatArr);
+		thisStr = new String(thisArr);
+		thatStr = new String(thatArr);
+		if (thisStr.equalsIgnoreCase(thatStr))
+			return true;
 		return false;
 	}
+
 }
