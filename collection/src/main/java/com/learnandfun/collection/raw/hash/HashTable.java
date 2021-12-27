@@ -1,14 +1,9 @@
-package com.learnandfun.collection.raw;
+package com.learnandfun.collection.raw.hash;
 
 /***
  * 
  * @author christokumar SEQUENCE OF OPERATION Set up the hash table Its a array
  *         linked list. Insert put, get
- * 
- * 
- * 
- * 
- *
  */
 
 public class HashTable {

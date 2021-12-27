@@ -1,4 +1,4 @@
-package com.learnandfun.collection.raw;
+package com.learnandfun.collection.raw.hash;
 
 public class HashNode {
 	public String key;
