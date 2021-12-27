@@ -2,12 +2,8 @@ package com.learnandfun.collection.raw.tree;
 
 /***
  * 
- * @author christokumar
- * SEQUENCE OF OPERATION
- * INSERT
- * SEARCH
- * SEARCH MIN
- * DELETE - NoChild, One Child, Two Child
+ * @author christokumar SEQUENCE OF OPERATION INSERT FIND MIN DELETE - NoChild,
+ *         One Child, Two Child
  */
 
 public class BinaryTree {
@@ -48,6 +44,21 @@ public class BinaryTree {
 		}
 	}
 
+	public BinaryNode find(int value) {
+		return find(value, root);
+	}
+
+	private BinaryNode find(int value, BinaryNode node) {
+		if (value > node.value && node.right != null) {
+			find(value, node.right);
+		} else if (value < node.value && node.left != null) {
+			find(value, node.left);
+		} else if (value == node.value) {
+			return node;
+		}
+		return null;
+	}
+
 	public void delete(int value) {
 
 		BinaryNode node = find(value);
@@ -80,10 +91,6 @@ public class BinaryTree {
 		}
 	}
 
-	public BinaryNode find(int value) {
-		return find(value, root);
-	}
-
 	public BinaryNode findMin(BinaryNode node) {
 		if (node.left == null) {
 			return node;
@@ -91,23 +98,12 @@ public class BinaryTree {
 		return findMin(node.left);
 	}
 
-	private BinaryNode find(int value, BinaryNode node) {
-		if (value > node.value && node.right != null) {
-			find(value, node.right);
-		} else if (value < node.value && node.left != null) {
-			find(value, node.left);
-		} else if (value == node.value) {
-			return node;
-		}
-		return null;
-	}
 
 	/***
 	 * DEPTH FIRST TRAVESING In-order L Root R Pre-Order Root L R - Helps in Sorting
 	 * Post Order L R Root -
 	 * 
 	 */
-
 	public void inOrder(BinaryNode node) {
 		if (node != null) {
 			inOrder(node.left);

@@ -10,6 +10,10 @@ public class AlgorithmToDo {
 
 	}
 
+	public void printTreeAscendingOrder() {
+
+	}
+
 	public void pathWithSum() {
 		// To do
 	}
