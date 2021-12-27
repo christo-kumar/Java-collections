@@ -2,6 +2,16 @@ package com.learnandfun.collection.raw;
 
 public class Node {
 	private int data;
+	private int min;
+
+	public int getMin() {
+		return min;
+	}
+
+	public void setMin(int min) {
+		this.min = min;
+	}
+
 	private Node next;
 
 	public Node() {

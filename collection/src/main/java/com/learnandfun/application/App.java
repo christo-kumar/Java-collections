@@ -104,9 +104,14 @@ public class App
 
 	public static void checkAlgo() {
 		Algorithm algo = new Algorithm();
-		System.out.print(algo.urlifyString("This is My Home"));
-		System.out.print(algo.compressString("aaabbb"));
+		// System.out.print(algo.urlifyString("This is My Home"));
+		// System.out.print(algo.compressString("aaabbb"));
+		// System.out.print(algo.isPalindrom("aba"));
+		// System.out.print(algo.isPalindrom("abbb"));
+		// System.out.print(algo.cipherDemo("zzZZaA"));
+		System.out.print(algo.reverseInt(204));
 
 	}
+
 
 }

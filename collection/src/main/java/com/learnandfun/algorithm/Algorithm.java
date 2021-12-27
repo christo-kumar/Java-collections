@@ -2,6 +2,8 @@ package com.learnandfun.algorithm;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
+import java.util.TreeSet;
 
 public class Algorithm {
 
@@ -110,5 +112,101 @@ public class Algorithm {
 			str = str + strKey + strVal;
 		}
 		return str;
+	}
+
+	public String removeDuplicate(String thisStr) {
+		char[] charArray = thisStr.toCharArray();
+		LinkedHashSet<Character> charSet = new LinkedHashSet<>();
+		for (char chr : charArray) {
+			charSet.add(chr);
+		}
+		return charSet.toString();
+	}
+
+	public void checkSubTree() {
+		//To do
+		TreeSet<Integer> ts1 = new TreeSet<>();
+		TreeSet<Integer> ts2 = new TreeSet<>();
+		ts1.add(1);
+		ts1.add(3);
+		ts1.add(5);
+		ts2.add(3);
+		ts2.add(5);
+		String thisStr = ts1.toString();
+		String thatStr = ts2.toString();
+		thisStr.contains(thatStr);
+		// Get two binary tree.
+		// tree.getOrder(); sorted Strings
+		// string to contain another.
+	}
+	
+	public void pathWithSum() {
+		//To do
+	}
+	
+	public String revStr(String thisStr) {
+		char[] charArray = thisStr.toCharArray();
+		int arrSize = charArray.length - 1;
+		int midIndex = charArray.length / 2;
+		for (int index = 0; index < midIndex; index++) {
+			char temp = charArray[index];
+			charArray[index] = charArray[arrSize-index];
+			charArray[arrSize - index] = temp;
+		}
+		return new String(charArray);
+	}
+	
+	public Boolean isPalindrom(String thisStr) {
+		String thisRevStr = revStr(thisStr);
+		if (thisStr.equalsIgnoreCase(thisRevStr))
+			return true;
+		return false;
+	}
+
+	public void fizbuzz() {
+		for (int index = 0; index <= 100; index++) {
+			if (index % 3 == 0 && index % 5 == 0) {
+				System.out.println("fizz-buzz");
+			} else if (index % 3 == 0) {
+				System.out.println("fizz");
+			} else if (index % 5 == 0) {
+				System.out.println("buzz");
+			} else {
+				System.out.println(index);
+			}
+		}
+	}
+
+	public void ransomeNote() {
+		// Todo
+	}
+
+	public String cipherDemo(String thisStr) {
+		char[] chrArray = thisStr.toCharArray();
+		for (int index = 0; index < chrArray.length; index++) {
+			int intChr = chrArray[index];
+			intChr = intChr + 3;
+			if (intChr > 128) {
+				int diff = intChr - 128;
+				intChr = diff - 1;
+			}
+			chrArray[index] = (char) intChr;
+		}
+		return new String(chrArray);
+	}
+
+	public int[] sieveOfEratosthenes(int index) {
+		// Keep on removing multiples of numbers
+		return null;
+	}
+
+	public Integer reverseInt(int number) {
+		String thisStr = String.valueOf(number);
+		String revStr = revStr(thisStr);
+		return Integer.valueOf(revStr);
+	}
+
+	public Boolean isAnagram(String thisStr, String thatStr) {
+		return false;
 	}
 }

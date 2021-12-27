@@ -30,9 +30,16 @@ public class Stack {
 		Node newNode = new Node(number);
 		if (top == null) {
 			top = newNode;
+			top.setMin(newNode.getData());
 		} else {
+			if (newNode.getData() < top.getMin()) {
+				newNode.setMin(newNode.getData());
+			} else {
+				newNode.setMin(top.getMin());
+			}
 			newNode.setNext(top);
 			top = newNode;
+
 		}
 		size++;
 	}
