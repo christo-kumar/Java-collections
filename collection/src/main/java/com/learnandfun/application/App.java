@@ -1,5 +1,6 @@
 package com.learnandfun.application;
 
+import com.learnandfun.algorithm.Algorithm;
 import com.learnandfun.collection.JavaList;
 import com.learnandfun.collection.raw.BinaryHeap;
 import com.learnandfun.collection.raw.BinaryTree;
@@ -21,7 +22,8 @@ public class App
 		// javaHashTable();
 		// javaBinaryTree();
 		// javaBinaryHeap();
-		javaGraph();
+		// javaGraph();
+		checkAlgo();
 	}
 
 	private static void javaGraph() {
@@ -97,6 +99,13 @@ public class App
 		binHeap.insert(15);
 		max = binHeap.getMax();
 		System.out.print(max);
+
+	}
+
+	public static void checkAlgo() {
+		Algorithm algo = new Algorithm();
+		System.out.print(algo.urlifyString("This is My Home"));
+		System.out.print(algo.compressString("aaabbb"));
 
 	}
 

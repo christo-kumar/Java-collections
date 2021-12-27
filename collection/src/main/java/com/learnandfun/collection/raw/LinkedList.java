@@ -1,5 +1,8 @@
 package com.learnandfun.collection.raw;
 
+import java.util.HashMap;
+import java.util.Map;
+
 //Sequence of operation
 //Add Front
 //Get First, Get Last
@@ -26,6 +29,10 @@ public class LinkedList {
 
 	public void addonHead(int number) {
 		Node newNode = new Node(number);
+		Map<Character, Integer> map = new HashMap<Character, Integer>();
+		map.get('c');
+		// map.keySet()
+
 		newNode.next = head;
 		head = newNode;
 		size++;
