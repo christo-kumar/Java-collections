@@ -1,15 +1,21 @@
-package com.learnandfun.collection.raw;
-
-import java.util.HashMap;
-import java.util.Map;
+package com.learnandfun.collection.raw.linkedlist;
 
 //Sequence of operation
-//Add Front
+
+//1. trav()
+//2. getLast()
+//3. add()
+//4. remove() removes last
+//5. search(int)
+//6. removeByValue
+//7. Clear
+
 //Get First, Get Last
 //Add Back
 //Size
 //Clear
 //Delete with value
+
 
 public class LinkedList {
 
@@ -17,81 +23,8 @@ public class LinkedList {
 	private Node tail = null;
 	private int size = 0;
 
-	public static class Node {
-		int data;
-		Node next;
-
-		public Node(int data) {
-			this.data = data;
-			next = null;
-		}
-	}
-
-	public void addonHead(int number) {
-		Node newNode = new Node(number);
-		Map<Character, Integer> map = new HashMap<Character, Integer>();
-		map.get('c');
-		// map.keySet()
-
-		newNode.next = head;
-		head = newNode;
-		size++;
-	}
-
-	public void add(int number) {
-		Node lastNode = getLast();
-		Node newNode = new Node(number);
-		if (lastNode == null) {
-			head = newNode;
-		} else {
-			lastNode.next = newNode;
-		}
-		size++;
-	}
-
-	public void remove() {
-		Node lastNode = getLast();
-		lastNode = null;
-	}
-
-	public void removeByValue(int value) {
-		Node searchedNode = search(value);
-		if (searchedNode == null) {
-			// do nothing
-		} else if (searchedNode.data == value) {
-			// first Node is equal
-			head = searchedNode.next;
-			searchedNode = null;
-
-		} else if (searchedNode.next.data == value) {
-			// other node not first
-			Node nodeToBeDeleted = searchedNode.next;
-			Node nodeTobeLinked = nodeToBeDeleted.next;
-			searchedNode.next = nodeTobeLinked;
-			nodeToBeDeleted = null;
-		}
-	}
-
-	public Node search(int value) {
-		Node current = head;
-		if (head == null || (head.data == value)) {
-			return head;
-		} else {
-			do {
-				if (current.next.data == value) {
-					break;
-				}
-			} while (current.next != null);
-		}
-		return current;
-	}
-
 	public Node trav(Node node) {
 		return node.next;
-	}
-
-	public Node getFirst() {
-		return head;
 	}
 
 	public Node getLast(Node node) {
@@ -102,30 +35,59 @@ public class LinkedList {
 		}
 	}
 
-	public Node getLast() {
-		Node current = head;
-		if (current == null) {
-			return null;
+	public void add(int number) {
+		Node lastNode = getLast(head);
+		Node newNode = new Node(number);
+		if (lastNode == null) {
+			head = newNode;
+		} else {
+			lastNode.next = newNode;
 		}
-		while (current.next != null) {
-			current = current.next;
-		}
-
-		return current;
+		size++;
 	}
 
-	public int size() {
-		int size = 0;
-		Node current = head;
-		if (current == null) {
-			return size;
-		} else {
-			while (current.next != null) {
-				current = current.next;
-				size++;
-			}
+	public void remove() {
+		Node lastNode = getLast(head);
+		lastNode = null;
+	}
+
+	public Node search(int value) {
+		return search(value, head);
+	}
+
+	private Node search(int value, Node current) {
+		if (value == head.data)
+			return head;
+		if (value == current.next.data)
+			return current;
+		if (current.next == null)
+			return null;
+		return search(value, current.next);
+
+	}
+
+	public void removeByValue(int value) {
+		Node searchedNode = search(value); // returns previous node
+		if (searchedNode == null) {
+			// do nothing
+		} else if (searchedNode.data == value) {
+			// first Node is equal
+			head = searchedNode.next;
+			searchedNode = null;
+
+		} else if (searchedNode.data == value) {
+			// other node not first
+			Node nodeToBeDeleted = searchedNode.next;
+			Node nodeTobeLinked = nodeToBeDeleted.next;
+			searchedNode.next = nodeTobeLinked;
+			nodeToBeDeleted = null;
 		}
-		return size;
+	}
+
+
+
+	public Node getFirst() {
+		return head;
 	}
 
 	public void clear() {
@@ -174,7 +136,7 @@ public class LinkedList {
 	}
 
 	private void setTail() {
-		tail = getLast();
+		tail = getLast(head);
 	}
 
 	// add on head remove from tail

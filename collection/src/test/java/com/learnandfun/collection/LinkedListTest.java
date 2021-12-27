@@ -1,7 +1,7 @@
 package com.learnandfun.collection;
 
 
-import com.learnandfun.collection.raw.LinkedList;
+import com.learnandfun.collection.raw.linkedlist.LinkedList;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

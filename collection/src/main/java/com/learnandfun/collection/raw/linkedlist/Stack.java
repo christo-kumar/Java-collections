@@ -1,9 +1,20 @@
-package com.learnandfun.collection.raw;
+package com.learnandfun.collection.raw.linkedlist;
+
+//1. Create Node
+//2. Class Stack top and size
+//3. Constuctor
+//4. Getters and Setters
+//5. push
 
 public class Stack {
 
 	private Node top;
 	private int size = 0;
+
+	public Stack() {
+		top = null;
+		size = 0;
+	}
 
 	public Node getTop() {
 		return top;
@@ -21,22 +32,11 @@ public class Stack {
 		this.size = size;
 	}
 
-	public Stack() {
-		top = null;
-		size = 0;
-	}
-
 	public void push(int number) {
 		Node newNode = new Node(number);
 		if (top == null) {
 			top = newNode;
-			top.setMin(newNode.getData());
 		} else {
-			if (newNode.getData() < top.getMin()) {
-				newNode.setMin(newNode.getData());
-			} else {
-				newNode.setMin(top.getMin());
-			}
 			newNode.setNext(top);
 			top = newNode;
 
