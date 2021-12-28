@@ -53,5 +53,23 @@ public class Sets {
 //		System.out.prinln(treeCharacter);
 	}
 
+	public void treeSet2() {
+		TreeSet<Integer> numbers = new TreeSet<>();
+		numbers.add(33);
+		numbers.add(40);
+		numbers.add(90); // returns: false
+		numbers.add(55); // output : 1,2,3
+		numbers.floor(50);// Output: 40
+		numbers.floor(40);// Output: 40
+		numbers.lower(40);// Output: 33
+		numbers.ceiling(50); // Output: 55
+		numbers.ceiling(55); // Output: 55
+		numbers.higher(55); // Output: 90
+		numbers.subSet(30, 60); // Output: 33, 40, 55 lower limit inclusive
+		numbers.subSet(30, true, 60, true); // Both limits are inclusive
+		numbers.headSet(50); // Output: 33, 40
+		numbers.tailSet(50); // Output: 40, 55
+	}
+
 
 }
