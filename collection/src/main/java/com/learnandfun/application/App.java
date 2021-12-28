@@ -1,6 +1,6 @@
 package com.learnandfun.application;
 
-import com.learnandfun.algorithm.Algorithm;
+import com.learnandfun.algorithm.AlgorithmSorting;
 import com.learnandfun.collection.JavaList;
 import com.learnandfun.collection.raw.BinaryHeap;
 import com.learnandfun.collection.raw.DynamicArray;
@@ -103,13 +103,19 @@ public class App
 	}
 
 	public static void checkAlgo() {
-		Algorithm algo = new Algorithm();
+		// Algorithm algo = new Algorithm();
 		// System.out.print(algo.urlifyString("This is My Home"));
 		// System.out.print(algo.compressString("aaabbb"));
 		// System.out.print(algo.isPalindrom("aba"));
 		// System.out.print(algo.isPalindrom("abbb"));
 		// System.out.print(algo.cipherDemo("zzZZaA"));
-		System.out.print(algo.reverseInt(204));
+		// System.out.print(algo.reverseInt(204));
+		
+		AlgorithmSorting sort = new AlgorithmSorting();
+		int[] array = { 3, 2, 1, 5 };
+		sort.bubbleSort(array);
+		
+		
 
 	}
 
