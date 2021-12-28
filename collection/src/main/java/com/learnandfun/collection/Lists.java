@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class JavaList
+public class Lists
 {
 	public void arrayList() {
 		List<String> names = new ArrayList<>();

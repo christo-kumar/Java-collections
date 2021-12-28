@@ -1,7 +1,7 @@
 package com.learnandfun.application;
 
 import com.learnandfun.algorithm.AlgorithmSorting;
-import com.learnandfun.collection.JavaList;
+import com.learnandfun.collection.Lists;
 import com.learnandfun.collection.raw.BinaryHeap;
 import com.learnandfun.collection.raw.DynamicArray;
 import com.learnandfun.collection.raw.graph.Graph;
@@ -57,7 +57,7 @@ public class App
     }
 
 	public static void javaCollection() {
-		JavaList collection = new JavaList();
+		Lists collection = new Lists();
 		collection.arrayList();
 	}
 
