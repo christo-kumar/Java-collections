@@ -1,12 +1,14 @@
 package com.learnandfun.application;
 
-import com.learnandfun.algorithm.AlgorithmSorting;
+import java.util.ArrayList;
+
 import com.learnandfun.collection.Lists;
 import com.learnandfun.collection.raw.BinaryHeap;
 import com.learnandfun.collection.raw.DynamicArray;
 import com.learnandfun.collection.raw.graph.Graph;
 import com.learnandfun.collection.raw.hash.HashTable;
 import com.learnandfun.collection.raw.tree.BinaryTree;
+import com.learnandfun.core.generic.GenericList;
 
 /**
  * Hello world!
@@ -111,9 +113,23 @@ public class App
 		// System.out.print(algo.cipherDemo("zzZZaA"));
 		// System.out.print(algo.reverseInt(204));
 		
-		AlgorithmSorting sort = new AlgorithmSorting();
-		int[] array = { 3, 2, 1, 5 };
-		sort.bubbleSort(array);
+		// AlgorithmSorting sort = new AlgorithmSorting();
+		// int[] array = { 3, 2, 1, 5 };
+		// sort.bubbleSort(array);
+		
+		// Queues obj = new Queues();
+		// obj.priorityQueues();
+		
+		GenericList<String> strList = new GenericList<>();
+		strList.addElement("Christo");
+		strList.getElement(0);
+		
+		GenericList<Integer> numList = new GenericList<>();
+		numList.addElement(1);
+		numList.getElement(0);
+		
+		numList.deomGenericFunction("Christo");
+		numList.demoWildCard(new ArrayList<Integer>());
 		
 		
 
